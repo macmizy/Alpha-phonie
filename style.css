@@ -1,0 +1,89 @@
+body {
+    background-image: url("./pictures/background-image-2.svg");
+    background-size: 19%;
+    background-position: 100% 90%;
+    background-repeat: no-repeat;
+}
+
+.container {
+    height: 80vh;
+    border: 2px solid rgba(212, 52, 52, 0);
+    background-image: url("./pictures/background-image-1.svg");
+    background-size: 20%;
+    background-position: 10% 10%;
+    background-repeat: no-repeat;
+}
+
+.form-row {
+    margin-top: 40vh;
+    /* border: 2px solid green; */
+}
+
+.input-sm {
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 17%;
+    outline: 1px solid black;
+}
+
+.input-lg {
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 7%;
+    outline: 1px solid black;
+}
+
+nav {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-family: 'Edu VIC WA NT Beginner', sans-serif;
+}
+
+#theme-switch {
+    width: 50px;
+    padding: 0px;
+}
+
+#div-for-backgroud-image {
+    position: absolute;
+    left: 0%;
+    bottom: 5%;
+    height: 30%;
+    width: 30%;
+    background-image: url("./pictures/background-image-4.svg");
+    background-size: 60%;
+    background-position: 10% 50%;
+    background-repeat: no-repeat;
+}
+
+
+
+@media (max-width: 767px) {
+    body {
+        background-image: url("./pictures/background-image-2.svg");
+        background-size: 50%;
+        background-position: 100% 90%;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        height: 82vh;
+        background-image: url("./pictures/background-image-1.svg");
+        background-size: 50%;
+        background-position: 10% 10%;
+        background-repeat: no-repeat;
+    }
+
+    #div-for-backgroud-image {
+        left: 5%;
+        bottom: 2%;
+        height: 30%;
+        width: 30%;
+        background-image: url("./pictures/background-image-4.svg");
+        background-size: 100%;
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+    }
+}
+
+

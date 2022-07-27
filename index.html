@@ -1,19 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name of chosen challenge</title>
-
+    <title>Phonie</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@700">
+    <link rel="stylesheet" href="bootstrap.min.css" id="theme">
+    <link rel="icon" href="./pictures/telephone logo.png">
 </head>
+
 <body>
-    
-    <h2>make some magic here!!</h2>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">
+            <img src="pictures/telephone logo.png" width="40" height="40" class="d-inline-block align-top" alt="phone logo">
+            Alpha-Phonie☝🏾📞
+        </a>
+        <form class="form-inline ml-auto my-2 my-lg-0">
+            🌞/🌙
+            <input class="form-control mr-sm-2" id="theme-switch" type="range" step="1" max="1">
+        </form>
+    </nav>
+
+    <div class="container">
+        <div class="row form-row">
+            <div class="col-sm">
+                <form>
+                    <div class="form-group row">
+                        <div class="col">
+
+                            <input type="tel" list="prefixes"
+                            class="form-control form-control-lg d-sm-none input input-sm"
+                            id="small-input"
+                            placeholder="Enter phone number"
+                            minlength="11"
+                            maxlength="14"/>
+
+                            <input type="tel" list="prefixes"
+                            class="form-control form-control-lg d-none d-sm-block input input-lg"
+                            id="large-input" placeholder="Enter phone number"
+                            minlength="11"
+                            maxlength="14"/>
+
+                            <datalist id="prefixes">
+                                <option value="0701">0701</option>
+                                <option value="0708">0708</option>
+                                <option value="0802">0802</option>
+                                <option value="0808">0808</option>
+                                <option value="0812">0812</option>
+                                <option value="0901">0901</option>
+                                <option value="0902">0902</option>
+                                <option value="0904">0904</option>
+                                <option value="0907">0907</option>
+                                <option value="0912">0912</option>
+                                <option value="0703">0703</option>
+                                <option value="0704">0704</option>
+                                <option value="0706">0706</option>
+                                <option value="0803">0803</option>
+                                <option value="0806">0806</option>
+                                <option value="0810">0810</option>
+                                <option value="0813">0813</option>
+                                <option value="0814">0814</option>
+                                <option value="0816">0816</option>
+                                <option value="0903">0903</option>
+                                <option value="0906">0906</option>
+                                <option value="0913">0913</option>
+                                <option value="0916">0916</option>
+                                <option value="0705">0705</option>
+                                <option value="0805">0805</option>
+                                <option value="0807">0807</option>
+                                <option value="0811">0811</option>
+                                <option value="0815">0815</option>
+                                <option value="0905">0905</option>
+                                <option value="0915">0915</option>
+                                <option value="0809">0809</option>
+                                <option value="0817">0817</option>
+                                <option value="0818">0818</option>
+                                <option value="0909">0909</option>
+                                <option value="0908">0908</option>
+                            </datalist>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="div-for-backgroud-image"></div>
+    <hr>
+    <div style="text-align: center">Built with 💓 by the Alpha-Phonie <a href="#">team</a>.</div>
 
     <!-- // ============= EEND DO NOT EDIT ============== // -->
     <script src="index.mjs" type="module"></script>
     <!-- // ============= EEND DO NOT EDIT ============== // -->
+<!--     <script src="app.mjs"></script> -->
 </body>
 </html>
