@@ -1,53 +1,53 @@
 let networks = {
-	airtel: {
-		numbers: [
-			"0701", "0708", "0802", "0808",
-			"0812", "0901", "0902", "0904",
-			"0907", "0912"
-		],
-		logo: "url('./pictures/airtel logo.jpg')"
-	},
+  airtel: {
+    numbers: [
+      "701", "708", "802", "808",
+      "812", "901", "902", "904",
+      "907", "912"
+    ],
+    logo: "url('./pictures/airtel logo.jpg')"
+  },
 
-	mtn: {
-		numbers: [
-			"0703", "0704", "0706", "0803",
-			"0806", "0810", "0813", "0814",
-			"0816", "0903", "0906", "0913",
-			"0916",
-		],
-		logo: "url('./pictures/mtn logo.png')"
-	},
+  mtn: {
+    numbers: [
+      "703", "704", "706", "803",
+      "806", "810", "813", "814",
+      "816", "903", "906", "913",
+      "916",
+    ],
+    logo: "url('./pictures/mtn logo.png')"
+  },
 
-	glo: {
-		numbers: [
-			"0705", "0805", "0807", "0811",
-			"0815", "0905", "0915",
-		],
-		logo: "url('./pictures/Globacom Limited Logo.png')"
-	},
+  glo: {
+    numbers: [
+      "705", "805", "807", "811",
+      "815", "905", "915",
+    ],
+    logo: "url('./pictures/Globacom Limited Logo.png')"
+  },
 
-	etisalat: {
-		numbers: [
-			"0809", "0817", "0818", "0909",
-			"0908",
-		],
-		logo: "url('./pictures/9mobile logo.jpg')"
-	}
+  etisalat: {
+    numbers: [
+      "809", "817", "818", "909",
+      "908",
+    ],
+    logo: "url('./pictures/9mobile logo.jpg')"
+  }
 }
 
 
 
 function startApp() {
 
-	let darkMode = true
-	let theme = document.querySelector("#theme")
-	let inputTags = document.querySelectorAll(".input")
-	inputTags.forEach(element => element.oninput = checkAndChange)
+  let darkMode = true
+  let theme = document.querySelector("#theme")
+  let inputTags = document.querySelectorAll(".input")
+  inputTags.forEach(element => element.oninput = checkAndChange)
 
-	document.querySelector("#theme-switch").onchange = () => {
-		darkMode = !darkMode
-		theme.href = darkMode ? "bootstrap.min.css" : "bootstrap-light.min.css"
-	}
+  document.querySelector("#theme-switch").onchange = () => {
+    darkMode = !darkMode
+    theme.href = darkMode ? "bootstrap.min.css" : "bootstrap-light.min.css"
+  }
 }
 
 
@@ -55,24 +55,51 @@ function startApp() {
 function checkAndChange(e) {
 
   // the value that was keyed in
-	let value = e.target.value
-	
-	for (let network in networks) {
+  let value = e.target.value
+
+  for (let network in networks) {
     // whether or not the first 4 characters of the value is in
     // any number array of the networks
-		let includes = networks[network]["numbers"].includes(value.slice(0, 4))
+    let includes = networks[network]["numbers"].includes(value.slice(1, 4))
 
-		if (includes && value !== "" && !isNaN(value)) {
-			console.log(network)
-			e.target.style.backgroundImage = networks[network]["logo"]
-			break
-		}
-		else e.target.style.backgroundImage = "none";
-	}
+    // Rahim Added excludes and recludes to be used in the "else if" statement.
+
+    let excludes = networks[network]["numbers"].includes(value.slice(4, 7))
+    let recludes = networks[network]["numbers"].includes(value.slice(5, 8))
+
+    // Rahim added this("if(value.slice(0,1) == 0)"") cause the first number, 
+    // inputed might not be 0 and it will still run and i made maxlength "15"
+    // for the "+2340" and also removed the 0's,in the numbers array to make
+    // it work with the "+234" and "+2340"
+
+    if (value.slice(0, 1) == 0) {
+      if (includes && value !== "" && !isNaN(value)) {
+        console.log(network)
+        e.target.style.backgroundImage = networks[network]["logo"]
+        break
+      }else { e.target.style.backgroundImage = "none" }
+    }
+    else if (value.slice(0, 5) == +2340) {
+      if (recludes && value !== "" && !isNaN(value)) {
+        console.log(network)
+        e.target.style.backgroundImage = networks[network]["logo"]
+        break
+      }else { e.target.style.backgroundImage = "none" }
+    }
+    else if (value.slice(0, 4) == +234) {
+      if (excludes && value !== "" && !isNaN(value)) {
+        console.log(network)
+        e.target.style.backgroundImage = networks[network]["logo"]
+        break
+      }else { e.target.style.backgroundImage = "none" }
+
+    }
+    else { e.target.style.backgroundImage = "none" }
+  }
 }
 
 // document.addEventListener('DOMContentLoaded', startApp);
-  
-  // ======= DO NOT EDIT ============== //
-  export default startApp;
+
+// ======= DO NOT EDIT ============== //
+export default startApp;
   // ======= EEND DO NOT EDIT ========= //
