@@ -35,35 +35,5 @@ After typing the phone number into the form field, the UI indicates that it is a
 * Support +XYZ country codes (e.g +234 for Nigeria) - Still detect the carrier even if the user prefixed the number with their +XYZ country code
 * Show auto-completion - Show suggestions as the user starts typing the phone number. E.g once they type 080, show them that 080*3* and 080*6* and other possible *matching* variants of the carrier
 
-### 02- Redactr - Scramble some words from a body of text content
 
-#### Scenario
-
-Your app is to help people safely share content on social media by scrambling portions of the text they don’t want the world to read/see. A user will write/paste the some content into a form field and then specify the words they need to be scrambled (using another field). Note the user is allowed to specify more than one word (separated by space) to be scrambled.
-
-#### Outcome
-After clicking a “Redact Now” button, the app scans through the original text and replaces the specified words to be scrambled with asterisks (i.e ***)
-
-#### Advanced features (OPTIONAL- build any, some or all of the following if you feel up to it) 
-
-* Allow the user specify what to use in replacing the words, so that the app can do the scrambling with what the user provides, be it asterisks, questions marks, dashes, underscores, or even other words
-* Display some stats like how many words were scanned, how many matched the words to be scrambled, how many characters were scrambled in total, how long it took (in seconds) to complete the scrambling task e.t.c. Feel free to be creative here
-
-### SchoolStat - A simple dashboard for a tech school
-
-#### Scenario
-
-You have data about which instructors are taking the courses in a school, as well as data about which students are in the frontend, backend or cloud tracks. Your users need to see some basic stats about the school
-
-#### Outcome: 
-
-When the user opens your dashboard app, they see HTML tables showing the following statistics/summaries
-* How many courses a given instructor is taking
-* How many students are in each of the tracks (frontend, backend and cloud)
-* How many students are male, female or other genders/orientation
-* Minimum, maximum, and average age of students in the school
-
-#### Advanced features (OPTIONAL- build any, some or all of the following if you feel up to it) 
-
-* Make the tables sortable by (at least) the column holding the numbers. Indicate what columns are sortable (e.g with an icon or by adding the <> charectars in the column header e.t.c). When the user clicks on a sortable column header, sort the records in the table by that column (e.g switch the current sort order such that if the column was already sorted ASC, sort in DESC)
-
+[Click to preview website](https://Alpha-phonie.rufairahim.repl.co)
